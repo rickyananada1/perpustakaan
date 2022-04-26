@@ -9,8 +9,8 @@ use App\kategori_model;
 use App\buku_model;
 use App\peminjaman_model;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Hash;
-use DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class DataController extends Controller
 {
@@ -299,7 +299,7 @@ class DataController extends Controller
             'password' => 'required'
         ]);
         if ($v) {
-            if (\Hash::check($req['password'], Auth::user()->password)) {
+            if (Hash::check($req['password'], Auth::user()->password)) {
                 if ($req['email'] == Auth::user()->email) {
                     users_model::where('id', Auth::user()->id)->update(['name' => $req['name'], 'email' => $req["email"]]);
                     session()->flash('berhasil', 'Data Anda Berhasil Diubah');

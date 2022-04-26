@@ -98,44 +98,24 @@
                   @csrf
                 <div class="form-group">
                    <input id="name" type="text" class="form-control form-control-user " name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Nama Member...">
-                    @error('name')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
                 </div>
                 <div class="form-group">
                   <input id="alamat" type="text" class="form-control form-control-user"  name="alamat" value="{{ old('alamat') }}" required autocomplete="alamat" placeholder="Alamat Tinggal...">
-                    @error('alamat')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-                </div>
+                                   </div>
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
                      <input id="no_telp" type="text" class="form-control form-control-user " name="no_telp" required autocomplete="no_telp" placeholder="No Telepon...">
-                        @error('no_telp')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                  </div>
-                  <div class="col-sm-6">
-                     <input id="tgl_lahir" type="text" class="form-control form-control-user" onfocus="(this.type='date')" onblur="(this.type='text')" name="tgl_lahir" required autocomplete="tgl_lahir" placeholder="Tanggal Lahir...">
-                      @error('tgl_lahir')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
                   </div>
 
+                  <div class="col-sm-6">
+                     <input id="tgl_lahir" type="text" class="form-control form-control-user" onfocus="(this.type='date')" onblur="(this.type='text')" name="tgl_lahir" required autocomplete="tgl_lahir" placeholder="Tanggal Lahir...">
+                  </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary">Simpan Perubahan</button>
                 </div>
-              </form>
+          </form>
       </div>
 
     </div>
